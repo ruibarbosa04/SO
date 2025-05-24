@@ -62,9 +62,9 @@ int interpretador(){
             }
             // verifica se é o comando "lista" 
             else if (strcmp(args[0], "lista") == 0) {
-            if (args[1] == NULL) {
-                printf("Erro: tem de indicar o caminho da diretoria a listar.\n");
-                continue;
+                if (args[1] == NULL) {
+                    printf("Erro: tem de indicar o caminho da diretoria a listar.\n");
+                    continue;
             }
 
             lista_diretorio(args[1]);
@@ -77,6 +77,37 @@ int interpretador(){
                 }
                 mostra_info(args[1]);
                 printf("Terminou comando informa com código 0\n");
+            }else if(strcmp(args[0], "conta")==0){
+                if(args[1]==NULL){
+                    printf("Erro: tem de indicar o nome do ficheiro.\n");
+                    continue;
+                }
+                conta(args[1]);
+                printf("Terminou comando informa com código 0 \n");
+            }else if(strcmp(args[0], "acrescenta")==0){
+                if(args[1]==NULL){
+                    printf("Erro: tem de indicar o nome do ficheiro origem.\n");
+                    continue;
+                }if(args[2]==NULL){
+                    printf("Erro: tem de indicar o nome do ficheiro origem.\n ");
+                    continue;
+                }
+                acrescenta(args[1], args[2]);
+                printf("Terminou comando acrescenta com código 0\n");
+            }else if (strcmp(args[0], "copia")==0){
+                if (args[1]==NULL){
+                    printf("Erro: tem de indicar o nome do ficheiro.\n");
+                    continue;
+                }
+                copia_ficheiro(args[1]);
+                printf("Terminou comando copia com código 0\n");
+            }else if(strcmp(args[0], "leitura")==0){
+                if(args[1]==NULL){
+                    printf("Erro: tem de indicar o nome do ficheiro.\n");
+                    continue;
+                }
+                mostra_ficheiro(args[1]);
+                printf("Terminou comando leitura com código 0\n");
             }else{
                 printf("Comando desconhecido: %s\n", args[0]); 
             }

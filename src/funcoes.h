@@ -42,6 +42,27 @@ void mostra_info(const char *ficheiro);
  * @param path Caminho da diretoria a listar. Se for NULL ou ".", usa a diretoria atual.
  */
 void lista_diretorio(const char *path);
+/**
+ * @brief 
+ * 
+ * @param nome_ficheiro 
+ */
+void conta(const char* nome_ficheiro);
+/**
+ * @brief 
+ * 
+ * @param origem 
+ * @param destino 
+ */
+void acrescenta(const char *origem, const char *destino);
+/**
+ * @brief 
+ * 
+ * @param ficheiro 
+ */
+void copia_ficheiro(const char *ficheiro);
+
+void mostra_ficheiro(const char* nome_ficheiro);
 
 
 #endif
