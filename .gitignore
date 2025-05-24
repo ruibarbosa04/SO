@@ -1,0 +1,23 @@
+# Ignorar ficheiros compilados
+*.o
+*.exe
+*.out
+*.bin
+*.a
+
+# Ignorar ficheiros de backup e temporários
+*~
+*.swp
+
+# Ignorar executáveis
+programa
+interpretador
+
+# Ignorar diretórios específicos
+build/
+.vscode/
+
+# Ignorar ficheiros do sistema
+.DS_Store
+Thumbs.db
+desktop.ini
