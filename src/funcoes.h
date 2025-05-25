@@ -61,7 +61,11 @@ void acrescenta(const char *origem, const char *destino);
  * @param ficheiro 
  */
 void copia_ficheiro(const char *ficheiro);
-
+/**
+ * @brief 
+ * 
+ * @param nome_ficheiro 
+ */
 void mostra_ficheiro(const char* nome_ficheiro);
 
 

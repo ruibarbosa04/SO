@@ -35,10 +35,6 @@ int interpretador(){
             break;
             }
 
-            if(strcmp(input, "apaga")==0){
-                
-            }
-
             int i = 0;
             char *token = strtok(input, " ");
             while (token != NULL && i < MAX_ARGS - 1) {
@@ -101,7 +97,7 @@ int interpretador(){
                 }
                 copia_ficheiro(args[1]);
                 printf("Terminou comando copia com código 0\n");
-            }else if(strcmp(args[0], "leitura")==0){
+            }else if(strcmp(args[0], "mostra")==0){
                 if(args[1]==NULL){
                     printf("Erro: tem de indicar o nome do ficheiro.\n");
                     continue;
